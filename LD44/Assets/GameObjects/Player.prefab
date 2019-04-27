@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 6535432205996726586}
   - component: {fileID: 6591192575649246723}
   - component: {fileID: 1988441973919861744}
+  - component: {fileID: 8511472236316159922}
+  - component: {fileID: 8511472236316159933}
+  - component: {fileID: 8511472236316159932}
+  - component: {fileID: 8511472236316159935}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -118,3 +122,72 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8511472236316159922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279095877303689188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb8bbf586fc5ef4f9adf6a92e299cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _MaxSpeed: 10
+--- !u!114 &8511472236316159933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279095877303689188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b29eb87ad1b614ca241a2e21e10c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  StartingHealth: 0
+  CurrentHealth: 0
+  InvincibleAfterDamage: 1
+  InvincibilityTime: 2
+--- !u!114 &8511472236316159932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279095877303689188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f325d9ef6d82f434ab449f14c069709d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 0
+  OnDamageable:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damager+DamageableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &8511472236316159935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279095877303689188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f740e2c0f811ac4492ba294d75ef29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
