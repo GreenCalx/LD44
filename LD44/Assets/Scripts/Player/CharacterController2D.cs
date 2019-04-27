@@ -15,9 +15,14 @@ public class CharacterController2D : MonoBehaviour
         _RB = GetComponent<Rigidbody2D>();
     }
 
-    public void Move(float HorizontalMovement)
+    public void MoveHorizontal(float HorizontalMovement)
     {
         _RB.velocity = new Vector2(HorizontalMovement * _MaxSpeed, _RB.velocity.y);
+    }
+
+    public void MoveVertical(float VerticalMovement)
+    {
+        _RB.velocity = new Vector2(_RB.velocity.x, VerticalMovement * _MaxSpeed);
     }
 
 
