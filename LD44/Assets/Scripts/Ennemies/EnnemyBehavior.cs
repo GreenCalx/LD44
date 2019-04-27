@@ -20,4 +20,9 @@ public class EnnemyBehavior : MonoBehaviour
     {
         
     }
+
+    private void FixedUpdate()
+    {
+
+    }
 }
