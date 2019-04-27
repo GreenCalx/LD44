@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn_chance: 0.5
+  BloodSplash: {fileID: 3366769173101116535, guid: 3408a3a66344c3e42b558fd2ea8e7af7,
+    type: 3}
 --- !u!70 &3630179978516621431
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

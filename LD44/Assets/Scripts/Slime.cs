@@ -23,6 +23,7 @@ public class Slime : Monster
 
     public void OnDamage(Damager iDamager, Damageable iDamageable)
     {
+        Instantiate(BloodSplash, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
