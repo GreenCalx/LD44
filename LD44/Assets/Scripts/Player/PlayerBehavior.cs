@@ -38,10 +38,42 @@ public class PlayerBehavior : MonoBehaviour
         _CC2D.MoveVertical(Input.GetAxis(PlayerInputs._Key_vertical));
     }
 
+    //-------------------------------------------------------------
+    //  KILL
+    //-------------------------------------------------------------
     public void kill(Damager iDamager, Damageable iDamageable)
     {
         print("DEAD DEAD DEAD");
-        SceneManager.LoadScene(Constants.hub_scene_name, LoadSceneMode.Single);
 
+        // UPDATE MONEY
+        FameStacker fstacker = gameObject.GetComponent<FameStacker>();
+        int gainedMoney = (!!fstacker) ?
+            fstacker.convertFameToMoney() :
+            0;
+
+        int bank = PlayerPrefs.GetInt(Constants.bank_account, 0);
+        PlayerPrefs.SetInt(Constants.bank_account, bank + gainedMoney);
+
+        // DEBUG TRACES
+        if (Constants.DEBUG_ENABLED)
+        {
+            string message = "GAINED MONEY : " + gainedMoney;
+            print(message);
+            bank = PlayerPrefs.GetInt(Constants.bank_account, 0);
+            message = " # BANK : " + bank ;
+            print(message);
+        }
+
+        // LOAD HUB
+        SceneManager.LoadScene(Constants.hub_scene_name, LoadSceneMode.Single);
     }
+
+    //-------------------------------------------------------------
+    //  RESET
+    //-------------------------------------------------------------
+    public void resetStats()
+    {
+        
+    }
+
 }

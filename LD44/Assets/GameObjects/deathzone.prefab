@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2257036075809020863}
   - component: {fileID: 2257036075809020862}
   - component: {fileID: 2257036075809020833}
+  - component: {fileID: 1717232326146430373}
   - component: {fileID: 2257036075809020832}
   m_Layer: 0
   m_Name: deathzone
@@ -130,6 +131,19 @@ PolygonCollider2D:
       - {x: -0.22, y: -0.59999996}
       - {x: 0.28, y: -0.44}
       - {x: 0.51, y: -0.34}
+--- !u!114 &1717232326146430373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257036075809020835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc68672f9246304889021a8b8003ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modifier: -50
 --- !u!114 &2257036075809020832
 MonoBehaviour:
   m_ObjectHideFlags: 0
