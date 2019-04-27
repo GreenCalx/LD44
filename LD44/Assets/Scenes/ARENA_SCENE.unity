@@ -231,9 +231,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 886155213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49b98034bd9702144b6c61800a31de1d, type: 3}
+  m_Script: {fileID: 11500000, guid: f325d9ef6d82f434ab449f14c069709d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 99
+  OnDamageable:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damager+DamageableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!60 &886155215
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -464,7 +470,7 @@ PrefabInstance:
     - target: {fileID: 5874264944426303191, guid: bf5dbeaf7fd246943bea083c1fa5cdb7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5874264944426303191, guid: bf5dbeaf7fd246943bea083c1fa5cdb7,
         type: 3}
