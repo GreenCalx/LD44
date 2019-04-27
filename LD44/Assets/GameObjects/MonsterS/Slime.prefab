@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7303941585331082094}
   - component: {fileID: -9015258582738676820}
   - component: {fileID: 8636285074637696292}
-  - component: {fileID: -6085386766187766465}
   - component: {fileID: 6722013096004069864}
   m_Layer: 0
   m_Name: Slime
@@ -145,6 +144,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Damager+DamageableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  FilterPlayer: 0
 --- !u!114 &-9015258582738676820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +159,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3630179978516621427}
+        m_MethodName: OnDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   OnDie:
@@ -183,21 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a33c580be9f9de34093c84166c482962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
---- !u!114 &-6085386766187766465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3630179978516621426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c25579803b3812244845836916b4a34d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: {x: 1, y: 1}
-  direction: {x: -1, y: 0}
+  SmoothSpeed: 3
 --- !u!50 &6722013096004069864
 Rigidbody2D:
   serializedVersion: 4
@@ -218,4 +215,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
