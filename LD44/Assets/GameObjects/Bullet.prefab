@@ -147,3 +147,4 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Damager+DamageableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  FilterPlayer: 1
