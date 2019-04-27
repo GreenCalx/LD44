@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3719858558641215131}
   - component: {fileID: 6535432205996726586}
   - component: {fileID: 6591192575649246723}
+  - component: {fileID: 258375481266887204}
   - component: {fileID: 1988441973919861744}
   - component: {fileID: 8511472236316159922}
   - component: {fileID: 8511472236316159933}
@@ -99,9 +100,25 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000120801924, y: -0.000060372353}
-  m_Size: {x: 0.011798735, y: 0.011798735}
+  m_Offset: {x: -0.000006124973, y: -0.000037438273}
+  m_Size: {x: 0.009459373, y: 0.009505242}
   m_Direction: 0
+--- !u!58 &258375481266887204
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8279095877303689188}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000029239059, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.004992258
 --- !u!50 &1988441973919861744
 Rigidbody2D:
   serializedVersion: 4
@@ -110,19 +127,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8279095877303689188}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8511472236316159922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,9 +168,25 @@ MonoBehaviour:
   OnDamage:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8511472236316159933}
+        m_MethodName: TakeDamage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: Damager, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnDie:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 8511472236316159935}
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: kill
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -164,15 +197,10 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnDie:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  StartingHealth: 0
-  CurrentHealth: 0
+  StartingHealth: 1
+  CurrentHealth: 1
   InvincibleAfterDamage: 1
-  InvincibilityTime: 2
+  InvincibilityTime: 0.5
 --- !u!114 &8511472236316159935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219450cf39ffbbb468074d3da2918514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  __fameStacked: 0
 --- !u!1001 &8289653470508444363
 PrefabInstance:
   m_ObjectHideFlags: 0
