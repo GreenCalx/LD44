@@ -283,7 +283,7 @@ PrefabInstance:
     - target: {fileID: 3719858558641215131, guid: 0edc6d75e73f3a148901e665f31f6ddd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3719858558641215131, guid: 0edc6d75e73f3a148901e665f31f6ddd,
         type: 3}
@@ -500,3 +500,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf5dbeaf7fd246943bea083c1fa5cdb7, type: 3}
+--- !u!1001 &8589783481167182099
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8589783481519639719, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_Name
+      value: MonsterSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639718, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589783481519639717, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: spawnables.Array.data[0]
+      value: 
+      objectReference: {fileID: 3630179978516621426, guid: 245d2806d939afb47b6a8b3ed65f5f06,
+        type: 3}
+    - target: {fileID: 8589783481519639717, guid: d1988d6ff5fdfc84f9191ab2a89757da,
+        type: 3}
+      propertyPath: spawnRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1988d6ff5fdfc84f9191ab2a89757da, type: 3}
