@@ -25,6 +25,16 @@ public class Damager : MonoBehaviour {
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        var Damageable = collision.GetComponent<Damageable>();
+        if (Damageable)
+        {
+            Damageable.TakeDamage(this);
+            OnDamageable.Invoke(this, Damageable);
+        }
+    }
+
     // Use this for initialization
     void Start () {
 		
