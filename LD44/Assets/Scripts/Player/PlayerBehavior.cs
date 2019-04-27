@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(PlayerInputs))]
@@ -35,5 +36,12 @@ public class PlayerBehavior : MonoBehaviour
     {
         _CC2D.MoveHorizontal(Input.GetAxis(PlayerInputs._Key_horizontal));
         _CC2D.MoveVertical(Input.GetAxis(PlayerInputs._Key_vertical));
+    }
+
+    public void kill(Damager iDamager, Damageable iDamageable)
+    {
+        print("DEAD DEAD DEAD");
+        SceneManager.LoadScene(Constants.hub_scene_name, LoadSceneMode.Single);
+
     }
 }

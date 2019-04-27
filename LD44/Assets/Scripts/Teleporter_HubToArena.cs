@@ -21,6 +21,6 @@ public class Teleporter_HubToArena : MonoBehaviour
     {
         PlayerBehavior pb = collision.GetComponent<PlayerBehavior>();
         if (!!pb)
-            SceneManager.LoadScene(Constants.arena_scene_name, LoadSceneMode.Additive);
+            SceneManager.LoadScene(Constants.arena_scene_name, LoadSceneMode.Single);
     }
 }
