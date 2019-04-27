@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInputs : MonoBehaviour
 {
-    public const string _Key_A = "Jump";
+    public const string _Key_A = "Fire1";
     public const string _Key_horizontal = "Horizontal";
     public const string _Key_vertical = "Vertical";
 
