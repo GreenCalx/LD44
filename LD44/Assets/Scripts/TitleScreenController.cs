@@ -9,7 +9,9 @@ public class TitleScreenController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // INIT GAME STATS
+        PlayerPrefs.SetInt(Constants.bank_account, Constants.STARTING_MONEY);
+
     }
 
     // Update is called once per frame
@@ -17,7 +19,8 @@ public class TitleScreenController : MonoBehaviour
     {
        bool spacePressed = Input.GetKey(KeyCode.Space);
         if (spacePressed)
-            SceneManager.LoadScene(Constants.hub_scene_name, LoadSceneMode.Additive);
+            SceneManager.LoadScene(Constants.hub_scene_name, LoadSceneMode.Single);
+
 
     }
 
