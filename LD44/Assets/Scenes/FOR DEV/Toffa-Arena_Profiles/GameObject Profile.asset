@@ -36,12 +36,40 @@ MonoBehaviour:
     value: 1
   rounded:
     overrideState: 1
-    value: 0
+    value: 1
   mask:
     overrideState: 0
     value: {fileID: 0}
     defaultState: 1
   opacity:
+    overrideState: 0
+    value: 1
+--- !u!114 &-391307800074441971
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
+  m_Name: Grain
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  colored:
+    overrideState: 0
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0.64
+  size:
+    overrideState: 1
+    value: 0.92
+  lumContrib:
     overrideState: 0
     value: 1
 --- !u!114 &11400000
@@ -59,6 +87,8 @@ MonoBehaviour:
   settings:
   - {fileID: -1833808480632489118}
   - {fileID: 2587020949268851320}
+  - {fileID: 8235034493308855164}
+  - {fileID: -391307800074441971}
 --- !u!114 &2587020949268851320
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -77,13 +107,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 53
+    value: 61
   intensityX:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 0.59
   intensityY:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 0.36
   centerX:
     overrideState: 0
     value: 0
@@ -93,3 +123,29 @@ MonoBehaviour:
   scale:
     overrideState: 0
     value: 1
+--- !u!114 &8235034493308855164
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  spectralLut:
+    overrideState: 1
+    value: {fileID: 2800000, guid: ff5f3317371838d4fa16ac6c2acf2040, type: 3}
+    defaultState: 1
+  intensity:
+    overrideState: 1
+    value: 0.14
+  fastMode:
+    overrideState: 0
+    value: 0
