@@ -17,7 +17,7 @@ public class TitleScreenController : MonoBehaviour
     {
        bool spacePressed = Input.GetKey(KeyCode.Space);
         if (spacePressed)
-            SceneManager.LoadScene(Constants.hub_scene_name, LoadSceneMode.Additive);
+            SceneManager.LoadScene(Constants.hub_scene_name, LoadSceneMode.Single);
 
     }
 
