@@ -7,6 +7,7 @@ public class ShopEnterController : MonoBehaviour
     public GameObject shopParentUIGO;
 
     private ShopBehaviour shop;
+    private PlayerBehavior capturedPlayerBehavior;
     private bool playerInShop;
 
     // Start is called before the first frame update
@@ -28,7 +29,7 @@ public class ShopEnterController : MonoBehaviour
     }
 
 
-    public void playerOnShop()
+    public void playerOnShop(PlayerBehavior iPlayerBehavior)
     {
         if (Input.GetKey(KeyCode.Space) && !playerInShop)
         {
@@ -39,6 +40,13 @@ public class ShopEnterController : MonoBehaviour
             // ENTER SHOP
             if (!!shop)
                 shop.gameObject.SetActive(true);
+
+            if (!!iPlayerBehavior)
+            {
+                capturedPlayerBehavior = iPlayerBehavior;
+                capturedPlayerBehavior.onPause = true;
+            }
+
         }
     }
 
@@ -53,6 +61,11 @@ public class ShopEnterController : MonoBehaviour
                 shop.gameObject.SetActive(false);
 
             playerInShop = false;
+            if (!!capturedPlayerBehavior)
+            {
+                capturedPlayerBehavior.onPause = false;
+                capturedPlayerBehavior = null;
+            }
         }
     }
 
@@ -61,7 +74,7 @@ public class ShopEnterController : MonoBehaviour
         PlayerBehavior pb = collision.GetComponent<PlayerBehavior>();
         if (!!pb)
         {
-            playerOnShop();
+            playerOnShop(pb);
         }
     }
 
@@ -70,7 +83,7 @@ public class ShopEnterController : MonoBehaviour
         PlayerBehavior pb = collision.GetComponent<PlayerBehavior>();
         if (!!pb)
         {
-            playerOnShop();
+            playerOnShop(pb);
         }
     }
 
