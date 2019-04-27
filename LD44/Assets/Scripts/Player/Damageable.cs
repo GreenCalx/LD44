@@ -47,7 +47,14 @@ public class Damageable : MonoBehaviour {
         if (CurrentInvincibilityTime <= 0)
         {
             CurrentHealth -= Damager.Damage;
-            OnDamage.Invoke(Damager, this);
+            try
+            {
+                OnDamage.Invoke(Damager, this);
+            } catch ( Exception e)
+            {
+                if (Constants.DEBUG_ENABLED)
+                    print("Damageable failed on TakeDamage OnDamage.Invoke");
+            }
             if (CurrentHealth < 0)
             {
                 OnDie.Invoke(Damager, this);
