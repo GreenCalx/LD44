@@ -5,7 +5,7 @@ using UnityEngine;
 public class FameStacker : MonoBehaviour
 {
 
-    private int __fameStacked;
+    public int __fameStacked = 0;
 
     public int convertFameToMoney()
     {
