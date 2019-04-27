@@ -21,7 +21,14 @@ public class Damager : MonoBehaviour {
         if(Damageable)
         {
             Damageable.TakeDamage(this);
-            OnDamageable.Invoke(this, Damageable);
+            try
+            {
+                OnDamageable.Invoke(this, Damageable);
+            } catch ( Exception e)
+            {
+                if (Constants.DEBUG_ENABLED)
+                    print("Damager failed on OnDamageable.Invoke");
+            }
         }
     }
 

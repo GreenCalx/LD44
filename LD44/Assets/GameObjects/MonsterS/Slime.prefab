@@ -10,9 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3630179978516621430}
   - component: {fileID: 3630179978516621429}
-  - component: {fileID: 3630179978516621428}
   - component: {fileID: 3630179978516621427}
   - component: {fileID: 3630179978516621431}
+  - component: {fileID: 7303941585331082094}
+  - component: {fileID: -9015258582738676820}
+  - component: {fileID: 8636285074637696292}
+  - component: {fileID: -6085386766187766465}
+  - component: {fileID: 6722013096004069864}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -82,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3630179978516621428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3630179978516621426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 249e9fba1fdb3894b909aaf79211bdd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3630179978516621427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f45b4c94c0a7540a73a8a73392bd45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawn_chance: 0.5
 --- !u!70 &3630179978516621431
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -116,9 +109,113 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.015941381, y: -0.037197173}
   m_Size: {x: 0.5855212, y: 0.64928734}
   m_Direction: 0
+--- !u!114 &7303941585331082094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630179978516621426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f325d9ef6d82f434ab449f14c069709d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
+  OnDamageable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8511472236316159933, guid: 0edc6d75e73f3a148901e665f31f6ddd,
+          type: 3}
+        m_MethodName: TakeDamage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: Damager, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Damager+DamageableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &-9015258582738676820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630179978516621426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b29eb87ad1b614ca241a2e21e10c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  StartingHealth: 0
+  CurrentHealth: 0
+  InvincibleAfterDamage: 1
+  InvincibilityTime: 2
+--- !u!114 &8636285074637696292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630179978516621426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33c580be9f9de34093c84166c482962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+--- !u!114 &-6085386766187766465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630179978516621426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25579803b3812244845836916b4a34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 1, y: 1}
+  direction: {x: -1, y: 0}
+--- !u!50 &6722013096004069864
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630179978516621426}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
