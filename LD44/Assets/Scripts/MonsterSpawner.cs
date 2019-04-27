@@ -74,7 +74,7 @@ public class MonsterSpawner : MonoBehaviour
         {
             GameObject spawned = Instantiate(entityToSpawn);
             Vector3 spawn_offset = new Vector3(Random.Range(-2, 2), Random.Range(-2, 2), 0);
-            spawned.transform.position = (transform.position += spawn_offset);
+            spawned.transform.position = (transform.position + spawn_offset);
         }
 
     }

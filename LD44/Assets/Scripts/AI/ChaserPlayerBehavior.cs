@@ -5,10 +5,13 @@ using UnityEngine;
 public class ChaserPlayerBehavior : MonoBehaviour
 {
     // Tweakables
-    public float moveSpeed = 1f;
+    //public float moveSpeed = 1f;
+    public float SmoothSpeed = 0.3f;
 
 
     private Transform target;
+    private Vector3 Velocity = Vector3.zero;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +22,19 @@ public class ChaserPlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Transform parentTransform = GetComponentInParent<Transform>();
-        parentTransform.LookAt(target);
 
-        MoveScript moveScript = GetComponent<MoveScript>();
-        moveScript.speed = new Vector2( moveSpeed, moveSpeed);
+    }
 
-        moveScript.direction = parentTransform.forward;
+    // Update is called once per frame
+    void LateUpdate()
+    {
 
+        Vector3 DesiredPosition;
+        if (target)
+        {
+            DesiredPosition = target.position;
+            Vector3 SmoothedPosition = Vector3.SmoothDamp(transform.position, DesiredPosition, ref Velocity, SmoothSpeed);
+            transform.position = new Vector3(SmoothedPosition.x, SmoothedPosition.y, transform.position.z);
+        }
     }
 }

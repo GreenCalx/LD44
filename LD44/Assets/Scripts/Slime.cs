@@ -20,4 +20,10 @@ public class Slime : Monster
     {
         
     }
+
+    public void OnDamage(Damager iDamager, Damageable iDamageable)
+    {
+        Destroy(gameObject);
+    }
+
 }
