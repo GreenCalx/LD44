@@ -52,11 +52,16 @@ public class Weapon : MonoBehaviour
         var mousePos = Input.mousePosition;
         var screenPos = _Camera.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, _Parent.position.z - _Camera.transform.position.z));
         var angle = Mathf.Atan2((screenPos.y - _Parent.position.y), (screenPos.x - _Parent.position.x));
+        if(angle < 0)
+        {
+            angle = -angle + 2 * (180 + angle);
+        }
         //transform.position = _StartingPosition.position;
         //transform.rotation = _StartingPosition.rotation;
-        //transform.RotateAround(_Parent.position, new Vector3(0,0,1), angle);
-        _Parent.eulerAngles = new Vector3(_Parent.eulerAngles.x, _Parent.eulerAngles.y, angle * Mathf.Rad2Deg);
+        transform.RotateAround(_Parent.position, new Vector3(0,0,1),  ((angle) - transform.eulerAngles.z)*Mathf.Deg2Rad);
+        //_Parent.eulerAngles = new Vector3(_Parent.eulerAngles.x, _Parent.eulerAngles.y, angle * Mathf.Rad2Deg);
         //Debug.Log(_Parent.position + " " + new Vector3(0, 0, 1) + " " + angle * Mathf.Rad2Deg);
+        Debug.Log(angle * Mathf.Rad2Deg);
          FireVector = new Vector2( Mathf.Cos(angle), Mathf.Sin(angle) );
     }
 }
