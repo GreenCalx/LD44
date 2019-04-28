@@ -2,23 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slime : Monster
+public class Nimbus : Monster
 {
-    public Slime()
-    {
-        base.spawn_chance = 1f;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        base.spawn_chance = 1f;
+        base.spawn_chance = 0.7f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        base.spawn_chance = 0.7f;
     }
 
     public void OnDamage(Damager iDamager, Damageable iDamageable)
@@ -27,8 +22,18 @@ public class Slime : Monster
 
         var Player = GameObject.Find("Player");
         var FS = Player.GetComponent<FameStacker>();
-        FS.addFame(10);
-        Destroy(gameObject);
+        FS.addFame(3);
     }
 
+    public void OnKill(Damager iDamager, Damageable iDamageable)
+    {
+        Instantiate(BloodSplash, transform.position, transform.rotation);
+
+        var Player = GameObject.Find("Player");
+        var FS = Player.GetComponent<FameStacker>();
+        FS.addFame(20);
+
+        Destroy(gameObject);
+
+    }
 }
