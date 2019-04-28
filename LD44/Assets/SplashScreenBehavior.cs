@@ -13,7 +13,10 @@ public class SplashScreenBehavior : MonoBehaviour
     private void OnEnd()
     {
         //load scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(Constants.hub_scene_name, LoadSceneMode.Single);
+
+
     }
     // Start is called before the first frame update
     void Start()
