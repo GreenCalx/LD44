@@ -74,6 +74,10 @@ public class PlayerBehavior : MonoBehaviour
         int bank = PlayerPrefs.GetInt(Constants.bank_account, 0);
         PlayerPrefs.SetInt(Constants.bank_account, bank + gainedMoney);
 
+        // UPDATE DEATH COUNT
+        int deathcount = PlayerPrefs.GetInt(Constants.death_count, 0);
+        PlayerPrefs.SetInt(Constants.death_count, deathcount+1);
+
         // DEBUG TRACES
         if (Constants.DEBUG_ENABLED)
         {
@@ -107,6 +111,12 @@ public class PlayerBehavior : MonoBehaviour
     {
         int bank = PlayerPrefs.GetInt(Constants.bank_account, 0);
         return bank;
+    }
+
+    public int getDeathCount()
+    {
+        int deathcount = PlayerPrefs.GetInt(Constants.death_count, 0);
+        return deathcount;
     }
 
 }

@@ -17,7 +17,8 @@ public class Constants
     public const int STARTING_MONEY = 100;
 
     // PLAYER SAVE SLOT LABELS
-    public const string bank_account  = "BANK_ACC";
+    public const string bank_account    = "BANK_ACC";
+    public const string death_count     = "DEATH_COUNT";
 
     // SHOP ITEMS 
     // UI NAMES
