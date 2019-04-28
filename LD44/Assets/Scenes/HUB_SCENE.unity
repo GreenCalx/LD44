@@ -321,12 +321,12 @@ PrefabInstance:
     - target: {fileID: 3719858558641215131, guid: 0edc6d75e73f3a148901e665f31f6ddd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.62
+      value: 4.75
       objectReference: {fileID: 0}
     - target: {fileID: 3719858558641215131, guid: 0edc6d75e73f3a148901e665f31f6ddd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.58
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 3719858558641215131, guid: 0edc6d75e73f3a148901e665f31f6ddd,
         type: 3}
@@ -583,8 +583,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890036651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.04, y: -0.49, z: -1}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: -4.46, y: -1.23, z: -1.1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -602,18 +602,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0095538795, y: -0.047769234}
+  m_Offset: {x: -0.26487735, y: -0.38319418}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.38218844, y: 0.73886335}
+  m_Size: {x: 0.7726833, y: 0.46852106}
   m_EdgeRadius: 0
 --- !u!1 &2032443180
 GameObject:
@@ -2101,17 +2101,17 @@ PrefabInstance:
     - target: {fileID: 4946004490442050662, guid: 56289c6b28af2d54db331c6d25025ed7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.084
+      value: -2.73
       objectReference: {fileID: 0}
     - target: {fileID: 4946004490442050662, guid: 56289c6b28af2d54db331c6d25025ed7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.311
+      value: -3.09
       objectReference: {fileID: 0}
     - target: {fileID: 4946004490442050662, guid: 56289c6b28af2d54db331c6d25025ed7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4946004490442050662, guid: 56289c6b28af2d54db331c6d25025ed7,
         type: 3}
