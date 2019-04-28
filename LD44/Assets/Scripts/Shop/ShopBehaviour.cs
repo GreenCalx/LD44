@@ -10,7 +10,7 @@ public class ShopBehaviour : MonoBehaviour
     public ShopItem selectedItem;
     public ShopItem[] items;
 
-    private float waitTime = 0.2f;
+    private float waitTime = 0.15f;
     private float timer;
     private bool selectorReady;
 

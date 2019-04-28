@@ -89,4 +89,13 @@ public class PlayerBehavior : MonoBehaviour
         
     }
 
+    //-------------------------------------------------------------
+    //  RESET
+    //-------------------------------------------------------------
+    public int getBankAccount()
+    {
+        int bank = PlayerPrefs.GetInt(Constants.bank_account, 0);
+        return bank;
+    }
+
 }
