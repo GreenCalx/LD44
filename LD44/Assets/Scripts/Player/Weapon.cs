@@ -64,7 +64,6 @@ public class Weapon : MonoBehaviour
         transform.RotateAround(_Parent.position, new Vector3(0,0,1),  angle*Mathf.Rad2Deg);
         //_Parent.eulerAngles = new Vector3(_Parent.eulerAngles.x, _Parent.eulerAngles.y, angle * Mathf.Rad2Deg);
         //Debug.Log(_Parent.position + " " + new Vector3(0, 0, 1) + " " + angle * Mathf.Rad2Deg);
-        Debug.Log(angle);
          FireVector = new Vector2( Mathf.Cos(angle), Mathf.Sin(angle) );
     }
 }
