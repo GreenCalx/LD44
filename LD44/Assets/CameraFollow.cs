@@ -14,6 +14,8 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         Transform PlayerTransform = GameObject.Find("Player").transform;
-        transform.position = new Vector3(PlayerTransform.position.x, PlayerTransform.position.y, transform.position.z);
+
+        transform.position = new Vector3(PlayerTransform.position.x, PlayerTransform.position.y, transform.position.z); //Vector3.Lerp(transform.position, new Vector3(PlayerTransform.position.x, PlayerTransform.position.y, transform.position.z), Time.deltaTime * 2);
+        GetComponent<CameraShake>().OnShake();
     }
 }

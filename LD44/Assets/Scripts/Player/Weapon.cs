@@ -52,8 +52,8 @@ public class Weapon : MonoBehaviour
         var mousePos = Input.mousePosition;
         var screenPos = _Camera.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, _Parent.position.z - _Camera.transform.position.z));
         var angle = Mathf.Atan2((screenPos.y - _Parent.position.y), (screenPos.x - _Parent.position.x));
-        transform.position = _StartingPosition.position;
-        transform.rotation = _StartingPosition.rotation;
+        //transform.position = _StartingPosition.position;
+        //transform.rotation = _StartingPosition.rotation;
         //transform.RotateAround(_Parent.position, new Vector3(0,0,1), angle);
         _Parent.eulerAngles = new Vector3(_Parent.eulerAngles.x, _Parent.eulerAngles.y, angle * Mathf.Rad2Deg);
         //Debug.Log(_Parent.position + " " + new Vector3(0, 0, 1) + " " + angle * Mathf.Rad2Deg);
