@@ -12,6 +12,7 @@ public class Monster : MonoBehaviour
     public virtual string getMonsterName() { return ""; }
 
     public GameObject BloodSplash;
+    public GameObject BloodSplashOnDmg;
     // Start is called before the first frame update
     void Start()
     {
