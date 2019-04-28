@@ -12,7 +12,7 @@ public class PlayerBehavior : MonoBehaviour
     private CharacterController2D _CC2D;
     private PlayerInputs _PI;
     private Weapon _Weapon;
-    private bool _IsFacingRight = true;
+
     public string AudioOnDie;
 
     public Animator Anim;

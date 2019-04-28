@@ -56,7 +56,7 @@ public class Damageable : MonoBehaviour {
                 if (Constants.DEBUG_ENABLED)
                     print("Damageable failed on TakeDamage OnDamage.Invoke");
             }
-            if (CurrentHealth < 0)
+            if (CurrentHealth <= 0)
             {
                 OnDie.Invoke(Damager, this);
             }
