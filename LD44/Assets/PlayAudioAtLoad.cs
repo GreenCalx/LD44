@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayAudioAtLoad : MonoBehaviour
 {
     GameObject AM;
+    public float FameMax = 150;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,10 @@ public class PlayAudioAtLoad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        AM = GameObject.Find("Audio Manager");
+        var AM_c = AM.GetComponent<AudioManager>();
+        var Money = GameObject.Find("Player").GetComponent<FameStacker>().convertFameToMoney();
+        var volume = 0.25 + ( FameMax / Money );
+        AM_c.SetVolume("Crowd", (float)volume);
     }
 }

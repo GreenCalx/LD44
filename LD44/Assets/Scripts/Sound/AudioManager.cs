@@ -53,4 +53,11 @@ public class AudioManager : MonoBehaviour {
         if (S == null) Debug.LogError("Sound " + SoundName + " not found!");
         S.Source.Play();
     }
+
+    public void SetVolume(string SoundName, float Volume)
+    {
+        SoundAsset S = Array.Find(Sounds, Sound => Sound.Name == SoundName);
+        if (S == null) Debug.LogError("Sound " + SoundName + " not found!");
+        S.Source.volume = Mathf.Lerp(S.Source.volume, Volume, Time.deltaTime);
+    }
 }
