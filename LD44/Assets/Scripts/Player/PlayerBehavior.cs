@@ -15,6 +15,8 @@ public class PlayerBehavior : MonoBehaviour
     private bool _IsFacingRight = true;
     public string AudioOnDie;
 
+    public Animator Anim;
+
     public bool onPause = false;
 
     public void OnDamage(Damager D, Damageable DA)
@@ -35,6 +37,7 @@ public class PlayerBehavior : MonoBehaviour
         _PI = GetComponent<PlayerInputs>();
         _CC2D = GetComponent<CharacterController2D>();
         _Weapon = GetComponentInChildren<Weapon>();
+        Anim = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -56,6 +59,9 @@ public class PlayerBehavior : MonoBehaviour
                 _Weapon.OnFire();
             }
         }
+
+        
+        Anim.SetFloat("PlayerAngle", _Weapon.transform.eulerAngles.z);
     }
 
     //-------------------------------------------------------------
