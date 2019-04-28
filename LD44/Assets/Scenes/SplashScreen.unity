@@ -336,9 +336,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplayedTexts:
-  - Text1
+  - You've been chosen by the old and bored cosmic gods to make an appearance on their
+    biggest TV show. Redeem your place on earth and prove human's resilience by giving
+    your whole self to the Arena. Give them a good show to escape this hell as soon
+    as possible !
   - Text2
-  - Text3
+  - 
 --- !u!114 &1024183731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +362,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bc53c2b1d5547843ab257e8388239dc, type: 2}
   m_sharedMaterial: {fileID: -2751826665489525157, guid: 4bc53c2b1d5547843ab257e8388239dc,
@@ -429,13 +432,13 @@ MonoBehaviour:
   m_margin: {x: -318.84174, y: -216.90234, z: -319.2442, w: -215.69063}
   m_textInfo:
     textComponent: {fileID: 1024183731}
-    characterCount: 8
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
