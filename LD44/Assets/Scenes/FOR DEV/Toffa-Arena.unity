@@ -193,6 +193,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3366769173101116535, guid: 511b0cde3f076fe4180dda58bcaca1af,
         type: 3}
+    - target: {fileID: 3630179978516621427, guid: 245d2806d939afb47b6a8b3ed65f5f06,
+        type: 3}
+      propertyPath: _KnockBack
+      value: 
+      objectReference: {fileID: 6649998430794994653, guid: 42a2d0c1231739b488bdfe5f5e0ec83e,
+        type: 3}
+    - target: {fileID: 7303941585331082094, guid: 245d2806d939afb47b6a8b3ed65f5f06,
+        type: 3}
+      propertyPath: _KnockBack
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: -9015258582738676820, guid: 245d2806d939afb47b6a8b3ed65f5f06,
         type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.size

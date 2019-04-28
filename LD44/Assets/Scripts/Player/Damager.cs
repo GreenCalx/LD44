@@ -14,6 +14,7 @@ public class Damager : MonoBehaviour {
 
     public int Damage;
     public DamageableEvent OnDamageable;
+    public KnockBack _KnockBack;
 
     public bool FilterPlayer = false;
 
@@ -41,33 +42,14 @@ public class Damager : MonoBehaviour {
                     print("Damager failed on OnTriggerEnter2D OnDamageable.Invoke");
             }
         }
+
+        if(_KnockBack)_KnockBack.Direction = GetComponent<Rigidbody2D>().velocity ;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (FilterPlayer)
-        {
-            var Cpmnt = collision.GetComponent<PlayerBehavior>();
-            if (Cpmnt)
-            {
-                return;
-            }
-        }
+        
 
-        var Damageable = collision.GetComponent<Damageable>();
-        if (Damageable)
-        {
-            Damageable.TakeDamage(this);
-            try
-            {
-                OnDamageable.Invoke(this, Damageable);
-            }
-            catch (Exception e)
-            {
-                if (Constants.DEBUG_ENABLED)
-                    print("Damager failed on OnTriggerStay2D OnDamageable.Invoke");
-            }
-        }
     }
 
     // Use this for initialization

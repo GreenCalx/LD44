@@ -6,6 +6,8 @@ public class Slime : Monster
 {
     public override string getMonsterName() { return Constants.monsters[0]; }
 
+    public KnockBack _KnockBack;
+
     public Slime()
     {
         base.spawn_chance = 1f;
@@ -23,9 +25,41 @@ public class Slime : Monster
         
     }
 
+    private void FixedUpdate()
+    {
+        if(_KnockBack)
+        {
+            if(_KnockBack.IsRunning)
+            {
+                _KnockBack.Apply(GetComponent<Rigidbody2D>());
+            }
+        }
+           
+    }
+
+    public void OnKnockBack(KnockBack KB)
+    {
+        _KnockBack = Instantiate(KB);
+        _KnockBack.Launch();
+    }
+
     public void OnDamage(Damager iDamager, Damageable iDamageable)
     {
-        Instantiate(BloodSplashOnDmg, transform.position, transform.rotation);
+        
+        Slime S = iDamager.GetComponent<Slime>();
+        if (S)
+        {
+            if (S._KnockBack.IsRunning )
+            {
+                Instantiate(BloodSplashOnDmg, transform.position, transform.rotation);
+                OnKnockBack(S._KnockBack);
+            }
+        }
+        else
+        {
+            Instantiate(BloodSplashOnDmg, transform.position, transform.rotation);
+            OnKnockBack(iDamager._KnockBack);
+        }
     }
 
     public void OnDie(Damager iDamager, Damageable iDamageable)
