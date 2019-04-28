@@ -30,7 +30,7 @@ public class CameraShake : MonoBehaviour
 
     public void OnShake()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) Shake();
+        if (Input.GetButtonDown(PlayerInputs._Key_A)) Shake();
         if (_Count > 0)
         {
             var newPos = GameObject.Find("Player").transform.position + Random.insideUnitSphere * Amount;
