@@ -13,6 +13,7 @@ public class PlayerBehavior : MonoBehaviour
     private PlayerInputs _PI;
     private Weapon _Weapon;
     private bool _IsFacingRight = true;
+    public string AudioOnDie;
 
     public void OnDamage(Damager D, Damageable DA)
     {
@@ -71,6 +72,10 @@ public class PlayerBehavior : MonoBehaviour
             message = " # BANK : " + bank ;
             print(message);
         }
+
+        var AM = GameObject.Find("Audio Manager");
+        var AM_c = AM.GetComponent<AudioManager>();
+        AM_c.Play("PlayerOnDie");
 
         // LOAD HUB
         SceneManager.LoadScene(Constants.hub_scene_name, LoadSceneMode.Single);
