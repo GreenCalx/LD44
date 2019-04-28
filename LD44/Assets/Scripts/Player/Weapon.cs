@@ -46,6 +46,8 @@ public class Weapon : MonoBehaviour
         }
     }
 
+
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -54,14 +56,15 @@ public class Weapon : MonoBehaviour
         var angle = Mathf.Atan2((screenPos.y - _Parent.position.y), (screenPos.x - _Parent.position.x));
         if(angle < 0)
         {
-            angle = -angle + 2 * (180 + angle);
+            angle = 2*Mathf.PI + angle;
         }
         //transform.position = _StartingPosition.position;
         //transform.rotation = _StartingPosition.rotation;
-        transform.RotateAround(_Parent.position, new Vector3(0,0,1),  ((angle) - transform.eulerAngles.z)*Mathf.Deg2Rad);
+        transform.RotateAround(_Parent.position, new Vector3(0, 0, 1), -transform.eulerAngles.z);
+        transform.RotateAround(_Parent.position, new Vector3(0,0,1),  angle*Mathf.Rad2Deg);
         //_Parent.eulerAngles = new Vector3(_Parent.eulerAngles.x, _Parent.eulerAngles.y, angle * Mathf.Rad2Deg);
         //Debug.Log(_Parent.position + " " + new Vector3(0, 0, 1) + " " + angle * Mathf.Rad2Deg);
-        Debug.Log(angle * Mathf.Rad2Deg);
+        Debug.Log(angle);
          FireVector = new Vector2( Mathf.Cos(angle), Mathf.Sin(angle) );
     }
 }
