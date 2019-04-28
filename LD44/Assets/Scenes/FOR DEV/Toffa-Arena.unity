@@ -132,11 +132,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
-    - target: {fileID: 3630179978516621426, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3630179978516621430, guid: 245d2806d939afb47b6a8b3ed65f5f06,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -192,97 +187,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3630179978516621427, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: BloodSplashOnDmg
-      value: 
-      objectReference: {fileID: 3366769173101116535, guid: 511b0cde3f076fe4180dda58bcaca1af,
-        type: 3}
-    - target: {fileID: 3630179978516621427, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: _KnockBack
-      value: 
-      objectReference: {fileID: 6649998430794994653, guid: 42a2d0c1231739b488bdfe5f5e0ec83e,
-        type: 3}
-    - target: {fileID: 7303941585331082094, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: _KnockBack
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -9015258582738676820, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -9015258582738676820, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -9015258582738676820, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -9015258582738676820, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 749198778}
-    - target: {fileID: -9015258582738676820, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnDie
-      objectReference: {fileID: 0}
-    - target: {fileID: -9015258582738676820, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: -9015258582738676820, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-        type: 3}
-      propertyPath: StartingHealth
-      value: 1000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 245d2806d939afb47b6a8b3ed65f5f06, type: 3}
---- !u!1 &749198770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3630179978516621426, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-    type: 3}
-  m_PrefabInstance: {fileID: 339590356}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &749198778 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3630179978516621427, guid: 245d2806d939afb47b6a8b3ed65f5f06,
-    type: 3}
-  m_PrefabInstance: {fileID: 339590356}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749198770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56f45b4c94c0a7540a73a8a73392bd45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &749198781
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749198770}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 05dc90e0031dac94baebd0e2a2181cd4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &787031026
 GameObject:
   m_ObjectHideFlags: 0

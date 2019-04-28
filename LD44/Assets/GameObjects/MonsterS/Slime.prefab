@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -7243320010760259778}
   - component: {fileID: 8636285074637696292}
   - component: {fileID: 6722013096004069864}
+  - component: {fileID: 749198781}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -117,7 +118,18 @@ MonoBehaviour:
       PublicKeyToken=null
   OnDie:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3630179978516621427}
+        m_MethodName: OnDie
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   StartingHealth: 0
@@ -154,6 +166,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Damager+DamageableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  _KnockBack: {fileID: 0}
   FilterPlayer: 0
 --- !u!114 &3630179978516621427
 MonoBehaviour:
@@ -170,7 +183,10 @@ MonoBehaviour:
   spawn_chance: 0.5
   BloodSplash: {fileID: 3366769173101116535, guid: 3408a3a66344c3e42b558fd2ea8e7af7,
     type: 3}
-  BloodSplashOnDmg: {fileID: 0}
+  BloodSplashOnDmg: {fileID: 3366769173101116535, guid: 511b0cde3f076fe4180dda58bcaca1af,
+    type: 3}
+  _KnockBack: {fileID: 6649998430794994653, guid: 42a2d0c1231739b488bdfe5f5e0ec83e,
+    type: 3}
 --- !u!70 &3630179978516621431
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -250,3 +266,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &749198781
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630179978516621426}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05dc90e0031dac94baebd0e2a2181cd4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
