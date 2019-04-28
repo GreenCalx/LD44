@@ -107,9 +107,10 @@ public class PlayerBehavior : MonoBehaviour
     //-------------------------------------------------------------
     public void resetStats()
     {
-        
+        // RESET UNLOCKABLE SAVE
+        foreach (string item in Constants.items)
+        { lockItem(item); }
     }
-
     //-------------------------------------------------------------
     //  getBankAccount
     //-------------------------------------------------------------
@@ -132,4 +133,17 @@ public class PlayerBehavior : MonoBehaviour
         return deathcount;
     }
 
+    public void unlock(string iItemName)
+    {
+        PlayerPrefs.SetInt(Constants.unlocked_items[iItemName], 1);
+    }
+    public void lockItem(string iItemName)
+    {
+        PlayerPrefs.SetInt(Constants.unlocked_items[iItemName], 0);
+    }
+
+    public bool hasUnlock(string iItemName)
+    {
+        return PlayerPrefs.GetInt(Constants.unlocked_items[iItemName], 0) == 1; 
+    }
 }

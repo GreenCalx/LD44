@@ -125,6 +125,8 @@ public class ShopBehaviour : MonoBehaviour
                         if (money >= price)
                         {
                             pb.spendMoney(price);
+                            string itemName = selectedItem.item_name;
+                            pb.unlock(itemName);
                             selectedItem.buy();
 
                             items = GetComponentsInChildren<ShopItem>();
@@ -133,6 +135,9 @@ public class ShopBehaviour : MonoBehaviour
                                 index = 0;
                                 selectedItem = items[index];
                             }
+
+                            if (Constants.DEBUG_ENABLED)
+                            { bool b = pb.hasUnlock(itemName); print("HAS UNLOCK ITEM ? " + b); }
 
                         }
                     }

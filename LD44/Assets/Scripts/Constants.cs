@@ -14,12 +14,17 @@ public class Constants
 
     // PLAYER STATS CONST VALUES
     public const int LETHAL_DAMAGE  = 99;
-    public const int STARTING_MONEY = 100;
+    public const int STARTING_MONEY = 10;
 
     // PLAYER SAVE SLOT LABELS
     public const string bank_account    = "BANK_ACC";
     public const string death_count     = "DEATH_COUNT";
 
+    // TWEAK VAR FOR MONSTER SPAWNER
+    public const float intervalBetweenMonsterSpawnersSpawn = 5f;
+    public const float maxMonsterSpawnersSpawn = 8;
+
+    // -------------------------------------------------------------
     // SHOP ITEMS 
     // UI NAMES
     public const string shopitem_name       = "Name";
@@ -65,4 +70,20 @@ public class Constants
         { items[4], "" }
     };
     // ===================================================================================
+
+    // -------------------------------------------------------------
+    // UNLOCKABLES
+    public static Dictionary<string, string> unlocked_items =
+    new Dictionary<string, string>
+    {
+        { items[0], "UNLOCKED______A" },
+        { items[1], "UNLOCKED______B" },
+        { items[2], "UNLOCKED______C" },
+        { items[3], "UNLOCKED______D" },
+        { items[4], "UNLOCKED______E" }
+    };
+
+    // MONSTERS
+    public static List<string> monsters = new List<string>
+        { "Slime", items[0], items[1], items[2] };
 }
