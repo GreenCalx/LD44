@@ -13,6 +13,7 @@ public class TextScrollingAnimation : MonoBehaviour
     private float _CurrentTime = 1;
     private int _CurrentIdx = 0;
     private Vector2 _StartingPosition;
+    private float TotalWidth =0;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +35,12 @@ public class TextScrollingAnimation : MonoBehaviour
             ++_CurrentIdx;
             if (_CurrentIdx >= DisplayedTexts.Capacity) _CurrentIdx = 0;
             _TM.text = DisplayedTexts[++_CurrentIdx];
-            _RT.position = _StartingPosition;
+            _RT.position = new Vector2(_RT.position.x + TotalWidth, _RT.position.y);
             _CurrentTime = InBetweenTime;
+            TotalWidth = 0;
         }
         _CurrentTime -= Time.deltaTime;
+        TotalWidth += ScrollSpeed * Time.fixedDeltaTime;
         _RT.position = new Vector2(_RT.position.x - ScrollSpeed * Time.fixedDeltaTime, _RT.position.y);
     }
 }
