@@ -556,6 +556,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2020789036, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: DisplayedTexts.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020789036, guid: 3821848d7529d254081891aba4130a53, type: 3}
       propertyPath: DisplayedTexts.Array.data[0]
       value: Our star still fighting strong!!
       objectReference: {fileID: 0}
@@ -574,6 +578,19 @@ PrefabInstance:
     - target: {fileID: 2020789036, guid: 3821848d7529d254081891aba4130a53, type: 3}
       propertyPath: DisplayedTexts.Array.data[4]
       value: 'You can participate and tell us if you like what you see! #SocialNetwork'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020789036, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: ScrollSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020789036, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: DisplayedTexts.Array.data[5]
+      value: 'Oswald : Go, Monsters, Gooo !'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020789036, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: DisplayedTexts.Array.data[6]
+      value: 'PizzaGlurk - For one glurk bought the second is half priced ! Call at
+        #344-664-8984'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3821848d7529d254081891aba4130a53, type: 3}
