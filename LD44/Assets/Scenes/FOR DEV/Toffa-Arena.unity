@@ -261,10 +261,34 @@ MonoBehaviour:
   Sounds:
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 134e41838f2b81a40a21214c6cc876df, type: 3}
-    Volume: 100
-    Pitch: 0
+    Volume: 1
+    Pitch: 1
     Loop: 0
     Name: Crowd
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: d6702b9bac0df3544ac8a4f135816293, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Name: EnnemyOnDie
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: b7c672a40463f4d4e98372ada55fbfa5, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Name: PlayerOnDie
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 9f06aa81718cc094a998e4a12bb78d84, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Name: BulletOnFire
+  - Source: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 0dd5cb41a6de8cc47b0b0439fd41d790, type: 3}
+    Volume: 1
+    Pitch: 1
+    Loop: 0
+    Name: BulletOnDestruction
 --- !u!4 &1506942964
 Transform:
   m_ObjectHideFlags: 0
@@ -458,6 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6fa0504194e5f41ab40bbf6254d47e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioOnDie: 
 --- !u!20 &2057224935 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8698198517547935693, guid: 3f10f98812175aa49aa124dd0bd127e9,
@@ -530,6 +555,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511472236316159935, guid: 0edc6d75e73f3a148901e665f31f6ddd,
+        type: 3}
+      propertyPath: AudioOnDie
+      value: PlayerOnDie
+      objectReference: {fileID: 0}
+    - target: {fileID: 359042441290847453, guid: 0edc6d75e73f3a148901e665f31f6ddd,
+        type: 3}
+      propertyPath: KnockBackPower
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0edc6d75e73f3a148901e665f31f6ddd, type: 3}

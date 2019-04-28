@@ -10,19 +10,40 @@ public class Weapon : MonoBehaviour
     private Transform _StartingPosition;
     public GameObject FireExit;
     public float BulletSpeed;
+    public float KnockBackPower;
+    public GameObject MuzzleFlash;
+    public float MuzzleFlashDuration;
+    private float MuzzleFlashCount;
     // Start is called before the first frame update
     void Start()
     {
         _Camera = FindObjectOfType<Camera>();
         _Parent = this.transform.parent.transform;
         _StartingPosition = this.transform;
+        MuzzleFlashCount = MuzzleFlashDuration;
     }
 
     public void OnFire()
     {
+        // Create bullet
         var b = Instantiate(Bullet, FireExit.transform.position, FireExit.transform.rotation);
         var RB = b.GetComponent<Rigidbody2D>();
         RB.velocity = new Vector2(FireVector.x  *BulletSpeed,FireVector.y *BulletSpeed);
+        // Apply Knockback
+        var PB = GetComponentInParent<PlayerBehavior>();
+        PB.KnockBack(KnockBackPower, -FireVector);
+        // Muzzle flash
+        MuzzleFlash.GetComponent<SpriteRenderer>().enabled = true;
+        MuzzleFlashCount = MuzzleFlashDuration;
+    }
+
+    public void Update()
+    {
+        MuzzleFlashCount -= Time.deltaTime;
+        if (MuzzleFlashCount < 0)
+        {
+            MuzzleFlash.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
     // Update is called once per frame

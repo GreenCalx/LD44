@@ -23,6 +23,12 @@ public class PlayerBehavior : MonoBehaviour
         //PS.Play();
     }
 
+    public void KnockBack( float KnockBackPower, Vector2 KnockBackDirection )
+    {
+        var _RB = GetComponent<Rigidbody2D>();
+        _RB.velocity = KnockBackDirection * KnockBackPower;
+    }
+
     // Awake is called as Init
     private void Awake()
     {
