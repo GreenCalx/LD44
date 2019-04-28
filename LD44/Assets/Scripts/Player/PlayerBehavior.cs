@@ -105,12 +105,19 @@ public class PlayerBehavior : MonoBehaviour
     }
 
     //-------------------------------------------------------------
-    //  RESET
+    //  getBankAccount
     //-------------------------------------------------------------
     public int getBankAccount()
     {
         int bank = PlayerPrefs.GetInt(Constants.bank_account, 0);
         return bank;
+    }
+
+    public void spendMoney(int iMoney)
+    {
+        int bank = PlayerPrefs.GetInt(Constants.bank_account, 0);
+        int new_bank = bank - iMoney;
+        PlayerPrefs.SetInt(Constants.bank_account, new_bank);
     }
 
     public int getDeathCount()

@@ -110,6 +110,36 @@ public class ShopBehaviour : MonoBehaviour
                 }// !updateinfo
                  // ----------------------------------------------------
             }
+            // ----------------------------------------------------
+            // BUY
+            if (Input.GetKey(KeyCode.Space))
+            {
+                GameObject player = GameObject.Find("Player");
+                if (!!player)
+                {
+                    PlayerBehavior pb = player.GetComponent<PlayerBehavior>();
+                    if (!!pb)
+                    {
+                        int money = pb.getBankAccount();
+                        int price = selectedItem.item_price;
+                        if (money >= price)
+                        {
+                            pb.spendMoney(price);
+                            selectedItem.buy();
+
+                            items = GetComponentsInChildren<ShopItem>();
+                            if (items.Length > 0)
+                            {
+                                index = 0;
+                                selectedItem = items[index];
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
         }//! selectorReady
-    }
+    }//!update
 }

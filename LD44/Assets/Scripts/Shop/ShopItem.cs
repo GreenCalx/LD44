@@ -34,4 +34,9 @@ public class ShopItem : MonoBehaviour
     {
         
     }
+
+    public void buy()
+    {
+        Destroy(gameObject);
+    }
 }
