@@ -46,6 +46,14 @@ public class PlayerBehavior : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown(PlayerInputs._Key_A))
+        {
+            _Weapon.OnFire();
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -53,11 +61,6 @@ public class PlayerBehavior : MonoBehaviour
         {
             _CC2D.MoveHorizontal(Input.GetAxis(PlayerInputs._Key_horizontal));
             _CC2D.MoveVertical(Input.GetAxis(PlayerInputs._Key_vertical));
-
-            if (Input.GetButtonDown(PlayerInputs._Key_A))
-            {
-                _Weapon.OnFire();
-            }
         }
 
         
