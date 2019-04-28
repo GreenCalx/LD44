@@ -69,7 +69,7 @@ public class SpawnerBuilder : MonoBehaviour
             GameObject loc_ref = spawnerLocations[rand_index];
             location = loc_ref.GetComponent<Transform>();
 
-            Transform newborn_location = location;
+            newborn.transform.position = location.position;
 
             // Spawnable monsters
             MonsterSpawner monsterSpawner = newborn.GetComponent<MonsterSpawner>();
@@ -94,8 +94,9 @@ public class SpawnerBuilder : MonoBehaviour
                                 Monster monster = go.GetComponent<Monster>();
                                 if (!!monster)
                                 {
-                                    if (monster.monster_name == item)
+                                    if (monster.getMonsterName() == item)
                                     {
+
                                         monsterSpawner.spawnables.Add(go);
                                     }
                                 }
@@ -103,6 +104,8 @@ public class SpawnerBuilder : MonoBehaviour
                         }
                     }
                 }//!for
+                //monsterSpawner.updateMonsterPoolandGO();
+                //monsterSpawner.generateSpawnArray();
             }
 
         }//! able to spawn

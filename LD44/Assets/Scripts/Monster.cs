@@ -8,7 +8,8 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public float spawn_chance = 0.5f;
-    public string monster_name = "Monster";
+
+    public virtual string getMonsterName() { return ""; }
 
     public GameObject BloodSplash;
     // Start is called before the first frame update
