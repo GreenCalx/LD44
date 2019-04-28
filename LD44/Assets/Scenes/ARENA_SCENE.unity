@@ -695,6 +695,8 @@ MonoBehaviour:
   - {fileID: 1836701299}
   poolOfUnlockableMonsters:
   - {fileID: 8459451595027110851, guid: 93460f8f59ab3eb4c94927796672f5ef, type: 3}
+  - {fileID: 8856850579406138639, guid: 787f8bdfb207b9f42af15c95f6447a1e, type: 3}
+  - {fileID: 6965586207901756431, guid: 41c95d63ab785b343a8ae467e2e08357, type: 3}
   defaultMonsterToSpawn: {fileID: 3630179978516621426, guid: 245d2806d939afb47b6a8b3ed65f5f06,
     type: 3}
   monsterSpawnerGO: {fileID: 8589783481519639719, guid: d1988d6ff5fdfc84f9191ab2a89757da,

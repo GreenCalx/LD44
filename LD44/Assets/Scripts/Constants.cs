@@ -35,7 +35,7 @@ public class Constants
 
     // < name >
     public static List<string> items = new List<string>
-    { "Nimbus", "Monster B", "Monster C", "Trap A", "Freedom" };
+    { "Nimbus", "CosmicHazard", "SoulReaver", "Trap A", "Freedom" };
 
     // <name, value>
     public static Dictionary<string, int> shopItems_Price =
@@ -53,8 +53,8 @@ public class Constants
     new Dictionary<string, string>
     {
         { items[0], "  Flying pirhanas and avid seekers of flesh." },
-        { items[1], " MONSTER B INFO TEXT " },
-        { items[2], " MONSTER C INFO TEXT " },
+        { items[1], " A Block of flesh with thousand mouths and eyes. " },
+        { items[2], " A soul sucker monster. " },
         { items[3], " TRAP A INFO TEXT " },
         { items[4], " FREEDOM INFO TEXT " }
     };
