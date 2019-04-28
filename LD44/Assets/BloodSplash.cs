@@ -13,6 +13,12 @@ public class BloodSplash : MonoBehaviour
         particles = new ParticleSystem.Particle[PS.main.maxParticles];
     }
 
+    void Awake()
+    {
+        PS = GetComponent<ParticleSystem>();
+        Destroy(this.gameObject, PS.startLifetime);
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -163,3 +163,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioOnFire: BulletOnFire
   AudioOnDestruction: BulletOnDestruction
+  lifetime: 2

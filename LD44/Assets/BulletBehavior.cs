@@ -6,6 +6,7 @@ public class BulletBehavior : MonoBehaviour
 {
     public string AudioOnFire;
     public string AudioOnDestruction;
+    public float lifetime;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,6 +34,11 @@ public class BulletBehavior : MonoBehaviour
         var AM = GameObject.Find("Audio Manager");
         var AM_c = AM.GetComponent<AudioManager>();
         AM_c.Play("BulletOnFire");
+    }
+
+    void Awake()
+    {
+        Destroy(this.gameObject, lifetime);
     }
 
     // Update is called once per frame
