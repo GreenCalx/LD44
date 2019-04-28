@@ -34,7 +34,7 @@ public class TextScrollingAnimation : MonoBehaviour
         {
             ++_CurrentIdx;
             if (_CurrentIdx >= DisplayedTexts.Capacity) _CurrentIdx = 0;
-            _TM.text = DisplayedTexts[++_CurrentIdx];
+            _TM.text = DisplayedTexts[_CurrentIdx];
             _RT.position = new Vector2(_RT.position.x + TotalWidth, _RT.position.y);
             _CurrentTime = InBetweenTime;
             TotalWidth = 0;
