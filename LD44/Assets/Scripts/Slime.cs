@@ -52,13 +52,17 @@ public class Slime : Monster
             if (S._KnockBack.IsRunning )
             {
                 Instantiate(BloodSplashOnDmg, transform.position, transform.rotation);
-                OnKnockBack(S._KnockBack);
+                KnockBack KB = S._KnockBack;
+                KB.Power *= 1 / iDamageable.Size;
+                OnKnockBack(KB);
             }
         }
         else
         {
             Instantiate(BloodSplashOnDmg, transform.position, transform.rotation);
-            OnKnockBack(iDamager._KnockBack);
+            KnockBack KB =iDamager._KnockBack;
+            KB.Power *= 1 / iDamageable.Size;
+            OnKnockBack(KB);
         }
     }
 

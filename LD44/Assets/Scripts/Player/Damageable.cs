@@ -25,6 +25,7 @@ public class Damageable : MonoBehaviour {
     public bool InvincibleAfterDamage = true;
     public float InvincibilityTime = 2f;
     private float CurrentInvincibilityTime = 0f;
+    public float Size;
 
     // Use this for initialization
     void Start () {

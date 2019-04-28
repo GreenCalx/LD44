@@ -187,6 +187,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -9015258582738676820, guid: 245d2806d939afb47b6a8b3ed65f5f06,
+        type: 3}
+      propertyPath: Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9015258582738676820, guid: 245d2806d939afb47b6a8b3ed65f5f06,
+        type: 3}
+      propertyPath: StartingHealth
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 245d2806d939afb47b6a8b3ed65f5f06, type: 3}
 --- !u!1 &787031026
@@ -361,6 +371,7 @@ MonoBehaviour:
   CurrentHealth: 0
   InvincibleAfterDamage: 1
   InvincibilityTime: 0
+  Size: 0
 --- !u!50 &1680825159
 Rigidbody2D:
   serializedVersion: 4
