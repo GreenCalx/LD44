@@ -67,7 +67,7 @@ public class MonsterSpawner : MonoBehaviour
 
     public void spawn()
     {
-        int rand_res = Random.Range(0, __spawnArray.Count - 1);
+        int rand_res = Random.Range(0, __spawnArray.Count );
         Monster monster_to_spawn = __spawnArray[rand_res];
         bool read_successfull = __monsterGameObjects.TryGetValue(monster_to_spawn, out GameObject entityToSpawn);
         if (!!read_successfull)

@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Slime : Monster
 {
+    public override string getMonsterName() { return Constants.monsters[0]; }
+
     public Slime()
     {
         base.spawn_chance = 1f;
-        base.monster_name = Constants.monsters[0];
     }
 
     // Start is called before the first frame update
     void Start()
     {
         base.spawn_chance = 1f;
-        base.monster_name = Constants.monsters[0];
     }
 
     // Update is called once per frame

@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Nimbus : Monster
 {
+    public override string getMonsterName() { return Constants.monsters[1]; }
+
+    public Nimbus()
+    {
+        base.spawn_chance = 0.7f;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         base.spawn_chance = 0.7f;
-        base.monster_name = Constants.monsters[1];
     }
 
     // Update is called once per frame
     void Update()
     {
-        base.spawn_chance = 0.7f;
-        base.monster_name = Constants.monsters[1];
+
     }
 
     public void OnDamage(Damager iDamager, Damageable iDamageable)
