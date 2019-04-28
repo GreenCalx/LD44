@@ -15,6 +15,8 @@ public class PlayerBehavior : MonoBehaviour
     private bool _IsFacingRight = true;
     public string AudioOnDie;
 
+    public bool onPause = false;
+
     public void OnDamage(Damager D, Damageable DA)
     {
         //ParticleSystem PS = GetComponentInChildren<ParticleSystem>();
@@ -38,12 +40,15 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        _CC2D.MoveHorizontal(Input.GetAxis(PlayerInputs._Key_horizontal));
-        _CC2D.MoveVertical(Input.GetAxis(PlayerInputs._Key_vertical));
-
-        if ( Input.GetButtonDown(PlayerInputs._Key_A) )
+        if (!onPause)
         {
-            _Weapon.OnFire();
+            _CC2D.MoveHorizontal(Input.GetAxis(PlayerInputs._Key_horizontal));
+            _CC2D.MoveVertical(Input.GetAxis(PlayerInputs._Key_vertical));
+
+            if (Input.GetButtonDown(PlayerInputs._Key_A))
+            {
+                _Weapon.OnFire();
+            }
         }
     }
 
@@ -87,6 +92,15 @@ public class PlayerBehavior : MonoBehaviour
     public void resetStats()
     {
         
+    }
+
+    //-------------------------------------------------------------
+    //  RESET
+    //-------------------------------------------------------------
+    public int getBankAccount()
+    {
+        int bank = PlayerPrefs.GetInt(Constants.bank_account, 0);
+        return bank;
     }
 
 }
