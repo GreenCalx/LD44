@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: dc59ff938fe648f458984b92f292a496
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Symtext
+  fontNames:
+  - Symtext
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7e38303aec986f248b94a1bf65858520, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
