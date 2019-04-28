@@ -7,6 +7,7 @@ public class BulletBehavior : MonoBehaviour
     public string AudioOnFire;
     public string AudioOnDestruction;
     public float lifetime;
+    public GameObject Explosion;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +16,8 @@ public class BulletBehavior : MonoBehaviour
         var AM = GameObject.Find("Audio Manager");
         var AM_c = AM.GetComponent<AudioManager>();
         AM_c.Play("BulletOnDestruction");
+
+        Instantiate(Explosion, transform.position, transform.rotation);
 
         Object.Destroy(gameObject);
     }

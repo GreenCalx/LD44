@@ -39,7 +39,7 @@ public class ChaserPlayerBehavior : MonoBehaviour
             Rigidbody2D RB = GetComponent<Rigidbody2D>();
             if (!S._KnockBack.IsRunning)
             {
-                RB.velocity = Velocity;
+                RB.velocity = Velocity*SmoothSpeed;
             }
             
             //transform.position = new Vector3(SmoothedPosition.x, SmoothedPosition.y, transform.position.z);
