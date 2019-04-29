@@ -10,12 +10,15 @@ public class TitleScreenController : MonoBehaviour
     void Start()
     {
         // INIT GAME STATS
+        PlayerPrefs.DeleteAll();
+        /*
         PlayerPrefs.SetInt(Constants.bank_account, Constants.STARTING_MONEY);
-        PlayerPrefs.SetInt(Constants.bank_account, 0);
+        PlayerPrefs.SetInt(Constants.death_count, 0);
         foreach (string key in Constants.unlocked_items.Keys)
         {
             PlayerPrefs.SetInt(key, 0);
         }
+        */
     }
 
     // Update is called once per frame

@@ -27,6 +27,25 @@ public class ShopBehaviour : MonoBehaviour
             if (!!button)
                 button.color = Color.red;
         }
+
+        // Destroy bought items
+        GameObject player = GameObject.Find("Player");
+        if (!!player)
+        {
+            PlayerBehavior pb = player.GetComponent<PlayerBehavior>();
+            if (!!pb)
+            {
+                foreach ( ShopItem item in items )
+                {
+                    string item_name = item.item_name;
+                    if ( pb.hasUnlock(item_name) )
+                    {
+                        item.buy();
+                    }
+                }
+            }
+        }
+        // ----------------------------------
     }
 
     // Update is called once per frame
