@@ -132,7 +132,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  StartingHealth: 100
+  StartingHealth: 20
   CurrentHealth: 0
   InvincibleAfterDamage: 0
   InvincibilityTime: 0
