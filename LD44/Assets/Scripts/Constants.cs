@@ -48,11 +48,11 @@ public class Constants
     public static Dictionary<string, int> shopItems_Price =
     new Dictionary<string, int>
     {
-        { items[0], 50 },
-        { items[1], 125 },
-        { items[2], 210 },
-        { items[3], 75 },
-        { items[4], 500 }
+        { items[0], 200 },
+        { items[1], 500 },
+        { items[2], 700 },
+        { items[3], 200 },
+        { items[4], 5000 }
     };
 
     // <name, info_text>

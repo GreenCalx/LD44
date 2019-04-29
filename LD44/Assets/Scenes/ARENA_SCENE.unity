@@ -3296,6 +3296,14 @@ PrefabInstance:
       value: 'PizzaGlurk - For one glurk bought the second is half priced ! Call at
         #344-664-8984'
       objectReference: {fileID: 0}
+    - target: {fileID: 1504828464, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: m_MaxValue
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504828464, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: m_Value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1048787806, guid: 3821848d7529d254081891aba4130a53, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

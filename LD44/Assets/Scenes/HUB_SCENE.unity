@@ -517,6 +517,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8698198517547935693, guid: 3f10f98812175aa49aa124dd0bd127e9,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698198517547935693, guid: 3f10f98812175aa49aa124dd0bd127e9,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698198517547935693, guid: 3f10f98812175aa49aa124dd0bd127e9,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f10f98812175aa49aa124dd0bd127e9, type: 3}
 --- !u!1 &1890036651
@@ -777,18 +792,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 746738484, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
-      propertyPath: m_Name
-      value: DeathCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 746738485, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 34.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 199455581, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
-      propertyPath: m_Name
-      value: death_count
-      objectReference: {fileID: 0}
     - target: {fileID: 1491607731413594553, guid: 0c015cd2450f57c4aa0c046e80aba9ad,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -803,6 +806,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 746738484, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
+      propertyPath: m_Name
+      value: DeathCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 746738485, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 34.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 199455581, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
+      propertyPath: m_Name
+      value: death_count
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
