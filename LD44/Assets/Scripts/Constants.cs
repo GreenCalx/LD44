@@ -24,7 +24,11 @@ public class Constants
     // TWEAK VAR FOR MONSTER SPAWNER
     public const float intervalBetweenMonsterSpawnersSpawn  = 5f;
     public const float maxMonsterSpawnersSpawn              = 8;
+
+    public const float intervalBetweenTrapSpawn             = 5f;
     public const float sawTrapSpawnChance                   = 0.3f;
+    public const float maxTrapSpawn = 5;
+
 
     // -------------------------------------------------------------
     // SHOP ITEMS 
