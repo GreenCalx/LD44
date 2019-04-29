@@ -97,16 +97,30 @@ public class ShopBehaviour : MonoBehaviour
                     }
 
                     // INFO IMAGE
-                    /*
-                    GameObject infoimagetGO = GameObject.FindGameObjectWithTag(Constants.shopitem_infoimage);
-                    if (!!infoimagetGO)
+                    Sprite infoSprite = selectedItem.itemInfoImage;
+                    if ( !!infoSprite)
                     {
-                        Image infoimage = infoimagetGO.GetComponent<Image>();
-                        Sprite s = Sprite.Create()
-                        if (!!infoimage)
-                            infoimage.sprite = Constants.shopItems_InfoImage[item_name];
+                        //GameObject infoimagetGO = GameObject.FindGameObjectWithTag(Constants.shopitem_infoimage);
+                        Image[] infoimages = GetComponentsInChildren<Image>();
+                        GameObject infoimageGO = null;
+                        foreach ( Image img in infoimages )
+                        {
+                            if ( img.name == Constants.shopitem_infoimage )
+                            { infoimageGO = img.gameObject; break; }
+                        }
+                        if (!!infoimageGO)
+                        {
+                            Image infoImage = infoimageGO.GetComponent<Image>();
+                            if (!!infoImage)
+                            {
+                                if (Constants.DEBUG_ENABLED)
+                                    print("UPDATE INFO IMAGE IN SHOP ");
+                                infoImage.sprite = infoSprite;
+                            }
+                        }
                     }
-                    */
+
+                    
                 }// !updateinfo
                  // ----------------------------------------------------
             }

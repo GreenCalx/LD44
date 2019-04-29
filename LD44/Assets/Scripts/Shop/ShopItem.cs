@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class ShopItem : MonoBehaviour
 {
     public int item_index;
+    public Sprite itemInfoImage;
+
     public string item_name { get; set; }
     public int item_price { get; set; }
 
