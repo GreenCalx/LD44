@@ -2532,6 +2532,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 122f8c76412a35345972a5a5218339dd,
         type: 3}
+    - target: {fileID: 1755523305876936932, guid: e1baa1f074dad6942be16ef6ead0141e,
+        type: 3}
+      propertyPath: m_Name
+      value: ShopItem_trap
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423033446966612708, guid: e1baa1f074dad6942be16ef6ead0141e,
+        type: 3}
+      propertyPath: m_Name
+      value: ShopItem_JellyMan
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734350028039680863, guid: e1baa1f074dad6942be16ef6ead0141e,
+        type: 3}
+      propertyPath: m_Name
+      value: ShopItem_freedom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215466923512752687, guid: e1baa1f074dad6942be16ef6ead0141e,
+        type: 3}
+      propertyPath: m_Name
+      value: ShopItem_leech
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618801415320564726, guid: e1baa1f074dad6942be16ef6ead0141e,
+        type: 3}
+      propertyPath: m_Name
+      value: ShopItem_Nimbus
+      objectReference: {fileID: 0}
+    - target: {fileID: 245222290723022464, guid: e1baa1f074dad6942be16ef6ead0141e,
+        type: 3}
+      propertyPath: itemInfoImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f23d2b815478c445a8f1f65a7c26951,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1baa1f074dad6942be16ef6ead0141e, type: 3}
 --- !u!1001 &8141879831062020520
