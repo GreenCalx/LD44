@@ -13,15 +13,71 @@ public class Monster : MonoBehaviour
 
     public GameObject BloodSplash;
     public GameObject BloodSplashOnDmg;
+
+    public KnockBack _KnockBack;
+
+    public int FameOnDmg;
+    public int FameOnDie;
     // Start is called before the first frame update
     void Start()
     {
 
     }
 
+    public void OnDamage(Damager iDamager, Damageable iDamageable)
+    {
+        Monster M = iDamager.GetComponent<Monster>();
+        if (M)
+        {
+            if (M._KnockBack.IsRunning)
+            {
+                Instantiate(BloodSplashOnDmg, transform.position, transform.rotation);
+                KnockBack KB = M._KnockBack;
+                KB.Power *= 1 / iDamageable.Size;
+                OnKnockBack(KB);
+            }
+        }
+        else
+        {
+            Instantiate(BloodSplashOnDmg, transform.position, transform.rotation);
+            KnockBack KB = iDamager._KnockBack;
+            KB.Power *= 1 / iDamageable.Size;
+            OnKnockBack(KB);
+        }
+
+        var Player = GameObject.Find("Player");
+        var FS = Player.GetComponent<FameStacker>();
+        FS.addFame(FameOnDmg);
+    }
+
+    public void OnKnockBack(KnockBack KB)
+    {
+        _KnockBack = Instantiate(KB);
+        _KnockBack.Launch();
+    }
+
+    public void OnDie(Damager iDamager, Damageable iDamageable)
+    {
+        Instantiate(BloodSplash, transform.position, transform.rotation);
+        var Player = GameObject.Find("Player");
+        var FS = Player.GetComponent<FameStacker>();
+        FS.addFame(FameOnDie);
+        Destroy(gameObject);
+    }
+
+    private void FixedUpdate()
+    {
+        if (_KnockBack)
+        {
+            if (_KnockBack.IsRunning)
+            {
+                _KnockBack.Apply(GetComponent<Rigidbody2D>());
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

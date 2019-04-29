@@ -22,25 +22,4 @@ public class Leech : Monster
     {
 
     }
-
-    public void OnDamage(Damager iDamager, Damageable iDamageable)
-    {
-        Instantiate(BloodSplash, transform.position, transform.rotation);
-
-        var Player = GameObject.Find("Player");
-        var FS = Player.GetComponent<FameStacker>();
-        FS.addFame(6);
-    }
-
-    public void OnKill(Damager iDamager, Damageable iDamageable)
-    {
-        Instantiate(BloodSplash, transform.position, transform.rotation);
-
-        var Player = GameObject.Find("Player");
-        var FS = Player.GetComponent<FameStacker>();
-        FS.addFame(80);
-
-        Destroy(gameObject);
-
-    }
 }

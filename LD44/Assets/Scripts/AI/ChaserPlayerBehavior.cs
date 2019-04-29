@@ -35,12 +35,21 @@ public class ChaserPlayerBehavior : MonoBehaviour
             DesiredPosition = target.position;
             Vector3 SmoothedPosition = Vector3.SmoothDamp(transform.position, DesiredPosition, ref Velocity, SmoothSpeed);
 
-            Slime S = GetComponent<Slime>();
+            Monster M = GetComponent<Monster>();
             Rigidbody2D RB = GetComponent<Rigidbody2D>();
-            if (!S._KnockBack.IsRunning)
+            if (M._KnockBack)
             {
-                RB.velocity = Velocity*SmoothSpeed;
+                if (!M._KnockBack.IsRunning)
+                {
+                    RB.velocity = Velocity * SmoothSpeed;
+                }
             }
+
+            else
+            {
+                RB.velocity = Velocity * SmoothSpeed;
+            }
+
             
             //transform.position = new Vector3(SmoothedPosition.x, SmoothedPosition.y, transform.position.z);
         }

@@ -22,25 +22,4 @@ public class JellyMan : Monster
     {
 
     }
-
-    public void OnDamage(Damager iDamager, Damageable iDamageable)
-    {
-        Instantiate(BloodSplash, transform.position, transform.rotation);
-
-        var Player = GameObject.Find("Player");
-        var FS = Player.GetComponent<FameStacker>();
-        FS.addFame(1);
-    }
-
-    public void OnKill(Damager iDamager, Damageable iDamageable)
-    {
-        Instantiate(BloodSplash, transform.position, transform.rotation);
-
-        var Player = GameObject.Find("Player");
-        var FS = Player.GetComponent<FameStacker>();
-        FS.addFame(50);
-
-        Destroy(gameObject);
-
-    }
 }

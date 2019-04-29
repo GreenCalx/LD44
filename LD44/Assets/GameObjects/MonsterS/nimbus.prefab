@@ -169,6 +169,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Damager+DamageableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  _KnockBack: {fileID: 0}
   FilterPlayer: 0
 --- !u!114 &-6825674965945119794
 MonoBehaviour:
@@ -185,17 +186,6 @@ MonoBehaviour:
   OnDamage:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -6825674965945119794}
-        m_MethodName: TakeDamage
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: Damager, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 7483017587721320495}
         m_MethodName: OnDamage
         m_Mode: 0
@@ -213,7 +203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7483017587721320495}
-        m_MethodName: OnKill
+        m_MethodName: OnDie
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -229,6 +219,7 @@ MonoBehaviour:
   CurrentHealth: 25
   InvincibleAfterDamage: 1
   InvincibilityTime: 0.2
+  Size: 2
 --- !u!114 &7483017587721320495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +235,11 @@ MonoBehaviour:
   spawn_chance: 0.5
   BloodSplash: {fileID: 3366769173101116535, guid: 3408a3a66344c3e42b558fd2ea8e7af7,
     type: 3}
+  BloodSplashOnDmg: {fileID: 3366769173101116535, guid: 511b0cde3f076fe4180dda58bcaca1af,
+    type: 3}
+  _KnockBack: {fileID: 0}
+  FameOnDmg: 3
+  FameOnDie: 20
 --- !u!114 &5148979664494593980
 MonoBehaviour:
   m_ObjectHideFlags: 0

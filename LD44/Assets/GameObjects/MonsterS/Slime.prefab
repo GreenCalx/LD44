@@ -188,6 +188,8 @@ MonoBehaviour:
     type: 3}
   _KnockBack: {fileID: 6649998430794994653, guid: 42a2d0c1231739b488bdfe5f5e0ec83e,
     type: 3}
+  FameOnDmg: 0
+  FameOnDie: 10
 --- !u!70 &3630179978516621431
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

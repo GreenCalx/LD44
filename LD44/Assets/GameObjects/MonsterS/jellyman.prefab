@@ -102,6 +102,11 @@ MonoBehaviour:
   spawn_chance: 0.3
   BloodSplash: {fileID: 3366769173101116535, guid: 3408a3a66344c3e42b558fd2ea8e7af7,
     type: 3}
+  BloodSplashOnDmg: {fileID: 3366769173101116535, guid: 511b0cde3f076fe4180dda58bcaca1af,
+    type: 3}
+  _KnockBack: {fileID: 0}
+  FameOnDmg: 1
+  FameOnDie: 50
 --- !u!70 &2261575858767466606
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -187,6 +192,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Damager+DamageableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  _KnockBack: {fileID: 0}
   FilterPlayer: 0
 --- !u!114 &-8466819779964157141
 MonoBehaviour:
@@ -247,6 +253,7 @@ MonoBehaviour:
   CurrentHealth: 200
   InvincibleAfterDamage: 1
   InvincibilityTime: 0.2
+  Size: 3
 --- !u!50 &-8070059718555311248
 Rigidbody2D:
   serializedVersion: 4

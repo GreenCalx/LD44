@@ -37,6 +37,7 @@ public class KnockBack : MonoBehaviour
     {
         _CurrentTime = Duration;
         IsRunning = true;
+        Destroy(gameObject, Duration);
     }
 
     public void Apply( Rigidbody2D RB )
