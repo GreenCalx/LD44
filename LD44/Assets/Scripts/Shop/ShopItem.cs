@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ShopItem : MonoBehaviour
@@ -39,6 +40,11 @@ public class ShopItem : MonoBehaviour
 
     public void buy()
     {
+        if (item_name==Constants.items[4]) // IF ITEM IS FREEDOM
+        {
+            SceneManager.LoadScene(Constants.end_scene_name, LoadSceneMode.Single);
+        }
+
         Destroy(gameObject);
     }
 }
