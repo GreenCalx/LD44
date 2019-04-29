@@ -78,29 +78,31 @@ public class TrapBuilder : MonoBehaviour
             // GET A RANDOM TRAP
             updateSpawnableArray();
             int n_traps = __spawnableTraps.Count;
-            int rand_trap_index = Random.Range(0, n_traps-1);
-            
-            // CREATE
-            GameObject newborn = Instantiate(__spawnableTraps[rand_trap_index]);
-            if (__spawnedTraps.Count >= Constants.maxTrapSpawn)
+            if (n_traps > 0)
             {
-                GameObject toDelete = __spawnedTraps[0];
-                __spawnedTraps.RemoveAt(0);
-                Destroy(toDelete);
+                int rand_trap_index = Random.Range(0, n_traps - 1);
 
-                __spawnedTraps.Add(newborn);
-            }
-            else { __spawnedTraps.Add(newborn); }
+                // CREATE
+                GameObject newborn = Instantiate(__spawnableTraps[rand_trap_index]);
+                if (__spawnedTraps.Count >= Constants.maxTrapSpawn)
+                {
+                    GameObject toDelete = __spawnedTraps[0];
+                    __spawnedTraps.RemoveAt(0);
+                    Destroy(toDelete);
 
-            // LOCATION
-            Transform location;
-            int n_spawners = trapLocations.Count;
-            int rand_index = Random.Range(0, (n_spawners - 1));
-            GameObject loc_ref = trapLocations[rand_index];
-            location = loc_ref.GetComponent<Transform>();
+                    __spawnedTraps.Add(newborn);
+                }
+                else { __spawnedTraps.Add(newborn); }
 
-            newborn.transform.position = location.position;
+                // LOCATION
+                Transform location;
+                int n_spawners = trapLocations.Count;
+                int rand_index = Random.Range(0, (n_spawners - 1));
+                GameObject loc_ref = trapLocations[rand_index];
+                location = loc_ref.GetComponent<Transform>();
 
+                newborn.transform.position = location.position;
+            }//!n_traps > 0
         }//! able to spawn
     }
 }
