@@ -152,6 +152,7 @@ MonoBehaviour:
   _KnockBack: {fileID: 6649998430794994653, guid: 42a2d0c1231739b488bdfe5f5e0ec83e,
     type: 3}
   FilterPlayer: 1
+  AffectOnlyPlayer: 0
 --- !u!114 &9007496912511197854
 MonoBehaviour:
   m_ObjectHideFlags: 0

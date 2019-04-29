@@ -33,21 +33,27 @@ public class Monster : MonoBehaviour
             {
                 Instantiate(BloodSplashOnDmg, transform.position, transform.rotation);
                 KnockBack KB = M._KnockBack;
-                KB.Power *= 1 / iDamageable.Size;
                 OnKnockBack(KB);
+                _KnockBack.Power *= 1 / iDamageable.Size;
+
+                iDamageable.CurrentHealth -= iDamager.Damage;
             }
         }
         else
         {
             Instantiate(BloodSplashOnDmg, transform.position, transform.rotation);
             KnockBack KB = iDamager._KnockBack;
-            KB.Power *= 1 / iDamageable.Size;
+            
             OnKnockBack(KB);
+            _KnockBack.Power *= 1 / iDamageable.Size;
+            var Player = GameObject.Find("Player");
+            var FS = Player.GetComponent<FameStacker>();
+            FS.addFame(FameOnDmg);
+
+            iDamageable.CurrentHealth -= iDamager.Damage;
         }
 
-        var Player = GameObject.Find("Player");
-        var FS = Player.GetComponent<FameStacker>();
-        FS.addFame(FameOnDmg);
+
     }
 
     public void OnKnockBack(KnockBack KB)

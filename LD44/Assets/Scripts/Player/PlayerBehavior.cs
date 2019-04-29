@@ -21,6 +21,7 @@ public class PlayerBehavior : MonoBehaviour
 
     public void OnDamage(Damager D, Damageable DA)
     {
+        DA.CurrentHealth -= D.Damage;
         //ParticleSystem PS = GetComponentInChildren<ParticleSystem>();
         //PS.Play();
     }

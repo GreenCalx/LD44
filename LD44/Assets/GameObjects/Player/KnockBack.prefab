@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 0.5
-  Power: 0.5
-  Direction: {x: 12.877933, y: 7.6914783}
+  Power: 0.3
+  Direction: {x: 14.769234, y: -2.6210175}
   IsRunning: 0
