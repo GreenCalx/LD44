@@ -36,7 +36,7 @@ public class Constants
 
     // < name >
     public static List<string> items = new List<string>
-    { "Nimbus", "CosmicHazard", "SoulReaver", "Trap A", "Freedom" };
+    { "Nimbus", "CosmicHazard", "SoulReaver", "SawTrap", "Freedom" };
 
     // <name, value>
     public static Dictionary<string, int> shopItems_Price =
@@ -56,7 +56,7 @@ public class Constants
         { items[0], "  Flying pirhanas and avid seekers of flesh." },
         { items[1], " A Block of flesh with thousand mouths and eyes. " },
         { items[2], " A soul sucker monster. " },
-        { items[3], " TRAP A INFO TEXT " },
+        { items[3], " A saw trap that will please the crowd by spreading guts everywhere. " },
         { items[4], " Free your soul from this cosmic hell. It's time to unite with your body on earth again." }
     };
 
