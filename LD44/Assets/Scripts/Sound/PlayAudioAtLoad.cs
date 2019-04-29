@@ -20,7 +20,7 @@ public class PlayAudioAtLoad : MonoBehaviour
         AM = GameObject.Find("Audio Manager");
         var AM_c = AM.GetComponent<AudioManager>();
         var Money = GameObject.Find("Player").GetComponent<FameStacker>().convertFameToMoney();
-        var volume = 0.1 + ( FameMax / Money ) * 0.2;
+        var volume = 0.1 + ( Mathf.Clamp(Money / FameMax, 0, 1) ) * 0.2;
         AM_c.SetVolume("Crowd", (float)volume);
     }
 }
