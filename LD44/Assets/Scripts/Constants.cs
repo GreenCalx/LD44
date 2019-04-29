@@ -57,7 +57,7 @@ public class Constants
         { items[1], " A Block of flesh with thousand mouths and eyes. " },
         { items[2], " A soul sucker monster. " },
         { items[3], " TRAP A INFO TEXT " },
-        { items[4], " FREEDOM INFO TEXT " }
+        { items[4], " Free your soul from this cosmic hell. It's time to unite with your body on earth again." }
     };
 
     // <name, info_image_url>
