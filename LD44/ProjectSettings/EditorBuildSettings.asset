@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TITLE_SCENE.unity
     guid: 6558bb9a30989d946b50fccd0d6d056d
   - enabled: 0
-    path: Assets/SplashScreen.unity
+    path: 
     guid: 2718d26b6457305498a763470052e6c8
   - enabled: 1
     path: Assets/Scenes/SplashScreen.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ARENA_SCENE.unity
     guid: 5b56eb417d01c4043b28a9445f650ae5
+  - enabled: 1
+    path: Assets/Scenes/END_GAME.unity
+    guid: 4dfa7acd66cdc354cbb5e58a0e4a7fe9
   m_configObjects: {}
