@@ -3296,6 +3296,30 @@ PrefabInstance:
       value: 'PizzaGlurk - For one glurk bought the second is half priced ! Call at
         #344-664-8984'
       objectReference: {fileID: 0}
+    - target: {fileID: 1048787806, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048787806, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833384926, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833384926, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833384926, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092232759, guid: 3821848d7529d254081891aba4130a53, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3821848d7529d254081891aba4130a53, type: 3}
 --- !u!1 &560042268
@@ -4098,16 +4122,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ArenaGrid
-      objectReference: {fileID: 0}
-    - target: {fileID: 128437196020830636, guid: bf5dbeaf7fd246943bea083c1fa5cdb7,
-        type: 3}
-      propertyPath: m_UsedByComposite
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5874264946526643166, guid: bf5dbeaf7fd246943bea083c1fa5cdb7,
-        type: 3}
-      propertyPath: m_UsedByComposite
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5874264944426303191, guid: bf5dbeaf7fd246943bea083c1fa5cdb7,
         type: 3}
@@ -9668,6 +9682,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 128437196020830636, guid: bf5dbeaf7fd246943bea083c1fa5cdb7,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5874264946526643166, guid: bf5dbeaf7fd246943bea083c1fa5cdb7,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf5dbeaf7fd246943bea083c1fa5cdb7, type: 3}

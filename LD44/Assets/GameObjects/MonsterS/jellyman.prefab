@@ -242,7 +242,8 @@ MonoBehaviour:
   StartingHealth: 200
   CurrentHealth: 200
   InvincibleAfterDamage: 1
-  InvincibilityTime: 0.2
+  InvincibilityTime: 1
+  CurrentInvincibilityTime: 0
   Size: 3
 --- !u!50 &-8070059718555311248
 Rigidbody2D:

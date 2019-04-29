@@ -51,6 +51,8 @@ public class Monster : MonoBehaviour
             FS.addFame(FameOnDmg);
 
             iDamageable.CurrentHealth -= iDamager.Damage;
+
+            iDamageable.CurrentInvincibilityTime = iDamageable.InvincibilityTime;
         }
 
 

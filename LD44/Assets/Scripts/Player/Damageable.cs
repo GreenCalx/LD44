@@ -24,7 +24,7 @@ public class Damageable : MonoBehaviour {
     public int CurrentHealth;
     public bool InvincibleAfterDamage = true;
     public float InvincibilityTime = 2f;
-    private float CurrentInvincibilityTime = 0f;
+    public float CurrentInvincibilityTime = 0f;
     public float Size;
 
     // Use this for initialization
@@ -60,7 +60,7 @@ public class Damageable : MonoBehaviour {
             {
                 OnDie.Invoke(Damager, this);
             }
-            CurrentInvincibilityTime = InvincibilityTime;
+            //CurrentInvincibilityTime = InvincibilityTime;
         }
     }
 }
