@@ -5,8 +5,6 @@ using UnityEngine;
 public class Nimbus : Monster
 {
     public override string getMonsterName() { return Constants.monsters[1]; }
-    public const int FameOnKill = 20;
-    public const int FameOnDmg = 3;
     public Nimbus()
     {
         base.spawn_chance = 0.7f;
