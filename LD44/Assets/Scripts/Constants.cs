@@ -22,8 +22,9 @@ public class Constants
     public const string death_count     = "DEATH_COUNT";
 
     // TWEAK VAR FOR MONSTER SPAWNER
-    public const float intervalBetweenMonsterSpawnersSpawn = 5f;
-    public const float maxMonsterSpawnersSpawn = 8;
+    public const float intervalBetweenMonsterSpawnersSpawn  = 5f;
+    public const float maxMonsterSpawnersSpawn              = 8;
+    public const float sawTrapSpawnChance                   = 0.3f;
 
     // -------------------------------------------------------------
     // SHOP ITEMS 
@@ -87,4 +88,8 @@ public class Constants
     // MONSTERS
     public static List<string> monsters = new List<string>
         { "Slime", items[0], items[1], items[2] };
+
+    // TRAPS
+    public static List<string> traps = new List<string>
+        { items[3] };
 }
