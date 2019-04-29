@@ -60,6 +60,10 @@ public class SpawnerBuilder : MonoBehaviour
 
                 spawnedMonsterSpawners.Add(newborn);
             }
+            else
+            {
+                spawnedMonsterSpawners.Add(newborn);
+            }
 
             // UPDATE NEZ BORN
             // Location
