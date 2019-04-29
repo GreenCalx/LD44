@@ -46,31 +46,31 @@ MonoBehaviour:
   Sounds:
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 134e41838f2b81a40a21214c6cc876df, type: 3}
-    Volume: 1
+    Volume: 0
     Pitch: 1
     Loop: 0
     Name: Crowd
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: d6702b9bac0df3544ac8a4f135816293, type: 3}
-    Volume: 1
+    Volume: 0.2
     Pitch: 1
     Loop: 0
     Name: EnnemyOnDie
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: b7c672a40463f4d4e98372ada55fbfa5, type: 3}
-    Volume: 1
+    Volume: 0.2
     Pitch: 1
     Loop: 0
     Name: PlayerOnDie
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 9f06aa81718cc094a998e4a12bb78d84, type: 3}
-    Volume: 1
+    Volume: 0.2
     Pitch: 1
     Loop: 0
     Name: BulletOnFire
   - Source: {fileID: 0}
     Clip: {fileID: 8300000, guid: 0dd5cb41a6de8cc47b0b0439fd41d790, type: 3}
-    Volume: 1
+    Volume: 0.5
     Pitch: 1
     Loop: 0
     Name: BulletOnDestruction
