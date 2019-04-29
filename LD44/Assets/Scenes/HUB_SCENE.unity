@@ -383,6 +383,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 359042441290847455, guid: 0edc6d75e73f3a148901e665f31f6ddd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 359042441290847452, guid: 0edc6d75e73f3a148901e665f31f6ddd,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0edc6d75e73f3a148901e665f31f6ddd, type: 3}
 --- !u!1 &1529772750 stripped
@@ -405,6 +415,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   deathCount: 0
+--- !u!61 &1529772752
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529772750}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.024857491, y: -0.5406575}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.001955, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.95792645, y: 0.91868496}
+  m_EdgeRadius: 0
 --- !u!1 &1550715405 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4946004490442050660, guid: 56289c6b28af2d54db331c6d25025ed7,
@@ -750,7 +786,7 @@ PrefabInstance:
     - target: {fileID: 2033745689872048694, guid: 0c015cd2450f57c4aa0c046e80aba9ad,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.9
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 2033745689872048694, guid: 0c015cd2450f57c4aa0c046e80aba9ad,
         type: 3}
@@ -792,6 +828,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 746738484, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
+      propertyPath: m_Name
+      value: DeathCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 746738485, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 34.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 199455581, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
+      propertyPath: m_Name
+      value: death_count
+      objectReference: {fileID: 0}
     - target: {fileID: 1491607731413594553, guid: 0c015cd2450f57c4aa0c046e80aba9ad,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -806,18 +854,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 746738484, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
-      propertyPath: m_Name
-      value: DeathCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 746738485, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 34.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 199455581, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
-      propertyPath: m_Name
-      value: death_count
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c015cd2450f57c4aa0c046e80aba9ad, type: 3}
