@@ -12,7 +12,7 @@ public class Constants
     public const string hub_scene_name      = "HUB_SCENE";
     public const string title_scene_name    = "TITLE_SCENE";
     public const string splash_screen_name  = "SplashScreen";
-    public const string splash_screen_name  = "END_GAME";
+    public const string end_scene_name      = "END_GAME";
 
     // PLAYER STATS CONST VALUES
     public const int LETHAL_DAMAGE  = 99;
