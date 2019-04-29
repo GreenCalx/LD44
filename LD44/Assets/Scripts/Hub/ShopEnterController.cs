@@ -69,15 +69,6 @@ public class ShopEnterController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        PlayerBehavior pb = collision.GetComponent<PlayerBehavior>();
-        if (!!pb)
-        {
-            playerOnShop(pb);
-        }
-    }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         PlayerBehavior pb = collision.GetComponent<PlayerBehavior>();
