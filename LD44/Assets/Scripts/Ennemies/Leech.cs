@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Leech : Monster
 {
-    public override string getMonsterName() { return Constants.monsters[2]; }
+    public override string getMonsterName() { return Constants.monsters[3]; }
 
     public Leech()
     {
