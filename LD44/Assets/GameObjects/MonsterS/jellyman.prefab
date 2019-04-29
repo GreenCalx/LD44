@@ -194,7 +194,7 @@ MonoBehaviour:
       PublicKeyToken=null
   _KnockBack: {fileID: 0}
   FilterPlayer: 0
-  AffectOnlyPlayer: 1
+  AffectOnlyPlayer: 0
 --- !u!114 &-8466819779964157141
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7581618243556933026}
   - component: {fileID: -1497122149783337573}
   - component: {fileID: 866291145}
+  - component: {fileID: -1259908158336982338}
   - component: {fileID: 9007496912511197854}
   - component: {fileID: -4491460768142530981}
   m_Layer: 0
@@ -153,6 +154,55 @@ MonoBehaviour:
     type: 3}
   FilterPlayer: 1
   AffectOnlyPlayer: 0
+--- !u!114 &-1259908158336982338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7581618243556933029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b29eb87ad1b614ca241a2e21e10c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9007496912511197854}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9007496912511197854}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Damageable+DamageEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  StartingHealth: 0
+  CurrentHealth: 0
+  InvincibleAfterDamage: 1
+  InvincibilityTime: 2
+  Size: 0
 --- !u!114 &9007496912511197854
 MonoBehaviour:
   m_ObjectHideFlags: 0

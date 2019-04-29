@@ -9,25 +9,27 @@ public class BulletBehavior : MonoBehaviour
     public float lifetime;
     public GameObject Explosion;
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Explode
+        var Damage = collision.gameObject.GetComponent<Damager>();
+        if(Damage)
+        {
+            if (Damage.AffectOnlyPlayer)
+            {
+                return;
+            }
+        }
 
+        OnDamage();
+    }
+
+    void OnDamage()
+    {
         var AM = GameObject.Find("Audio Manager");
         var AM_c = AM.GetComponent<AudioManager>();
         AM_c.Play("BulletOnDestruction");
 
         Instantiate(Explosion, transform.position, transform.rotation);
-
-        Object.Destroy(gameObject);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        var AM = GameObject.Find("Audio Manager");
-        var AM_c = AM.GetComponent<AudioManager>();
-        AM_c.Play("BulletOnDestruction");
 
         Object.Destroy(gameObject);
     }

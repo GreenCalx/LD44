@@ -157,8 +157,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8511472236316159935, guid: 0edc6d75e73f3a148901e665f31f6ddd,
           type: 3}
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: OnDamage
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -171,7 +171,7 @@ MonoBehaviour:
       PublicKeyToken=null
   _KnockBack: {fileID: 0}
   FilterPlayer: 0
-  AffectOnlyPlayer: 1
+  AffectOnlyPlayer: 0
 --- !u!114 &-6825674965945119794
 MonoBehaviour:
   m_ObjectHideFlags: 0
